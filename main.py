@@ -3,8 +3,11 @@ import numpy as np
 import glob
 import cv2
 import os
-import pygame.camera
+# import pygame.camera
 
+# pip install pygame
+# pip install numpy
+# pip install opencv-python
 
 class Matrix:
     def __init__(self, app, font_size=7):
@@ -112,14 +115,14 @@ class MatrixVision:
     def __init__(self):
         self.RES = self.WIDTH, self.HEIGHT = 960, 720
         pg.init()
-        pygame.display.set_caption('matrix visual')
+        pg.display.set_caption('matrix visual')
         self.screen = pg.display.set_mode(self.RES)
         self.surface = pg.Surface(self.RES)
         self.clock = pg.time.Clock()
         self.matrix = Matrix(self)
 
-        # pygame.camera.init()
-        # self.cam = pygame.camera.Camera(pygame.camera.list_cameras()[0])
+        # pg.camera.init()
+        # self.cam = pg.camera.Camera(pg.camera.list_cameras()[0])
         # self.cam.start()
 
     def draw(self):
